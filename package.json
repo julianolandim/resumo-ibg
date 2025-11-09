@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "NODE_OPTIONS=--openssl-legacy-provider ng serve",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider ng build",
+    "start": "bash -c 'source ~/.nvm/nvm.sh && nvm use 16 && ng serve'",
+    "build": "bash -c 'source ~/.nvm/nvm.sh && nvm use 16 && ng build'",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -24,8 +24,9 @@
     "@quramy/angular-lang-service": "^1.0.0",
     "@types/node": "^12.0.8",
     "bootstrap": "^3.3.6",
+    "querystring": "^0.2.1",
     "rxjs": "~6.4.0",
-    "tslib": "^1.9.0",
+    "tslib": "^1.14.1",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
@@ -36,6 +37,8 @@
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "codelyzer": "^5.0.0",
+    "crypto-browserify": "^3.12.1",
+    "fsevents": "^1.2.13",
     "jasmine-core": "~3.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
@@ -43,9 +46,13 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
+    "path-browserify": "^1.0.1",
     "protractor": "~5.4.0",
+    "querystring-es3": "^0.2.1",
+    "stream-browserify": "^3.0.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.4.3"
+    "typescript": "~3.4.3",
+    "url": "^0.11.4"
   }
 }

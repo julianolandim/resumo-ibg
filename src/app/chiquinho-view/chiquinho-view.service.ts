@@ -21,7 +21,7 @@ export class ChiquinhoViewService {
 
   geTotais(){
     let codRep = this.getCorep();
-    return this.http.post(environment.apiUrl+"/total-diario-por-repres/"+codRep,null);
+    return this.http.post(environment.apiUrl+"/total-diario-por-repres?codrep="+codRep,null);
   }
 
 }
