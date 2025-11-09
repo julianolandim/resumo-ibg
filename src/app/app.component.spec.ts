@@ -1,12 +1,25 @@
 import { TestBed, async } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { AmbienteService } from './ambiente/ambiente.service';
+
+class MockAmbienteService {
+  validaLogin() {}
+}
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [
         AppComponent
       ],
+      providers: [
+        { provide: AmbienteService, useClass: MockAmbienteService }
+      ],
+      // Ignore unknown elements/attributes from the AppComponent template
+      schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));
 
@@ -22,10 +35,5 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('resumo-ibg');
   });
 
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to resumo-ibg!');
-  });
+  // The DOM assertion was removed because the template does not render a static h1 title.
 });
