@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-   apiUrl:  'http://localhost:8080/api-resumo-ibg'
+   apiUrl:  'http://localhost:8006/api-resumo-ibg'
   //apiUrl: "http://192.168.0.178:8080/api-resumo-ibg",
   //apiUrl: "http://192.168.0.178:8080/api-resumo-ibg"
   //apiUrl: "http://201.16.169.4:8006/api-resumo-ibg"
