@@ -1,0 +1,95 @@
+
+.content{
+  font-family:Arial, "Open Sans", Helvetica, Gotham, sans-serif;
+  margin: 15px 5px 5px 5px;
+}
+
+
+
+.contornoRetangulo{
+  border:1px #848484 solid;
+}
+
+.logoCabecalho{
+  float: left;
+  width: 300px;
+  height: auto;
+  margin: 0px;
+  clear: none;
+  color: rgb(0, 0, 0);
+}
+
+.cantoDireitoCabecalho{
+  float: right;
+  padding-top: 12px;
+  text-align: right;
+  font-size: 12px;
+}
+
+
+.tituloRelatorio{
+  padding-top: 0px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  padding-bottom: 10px;
+
+}
+
+.tituloRelatorio2{
+  padding-top: 6px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  padding-bottom: 5px;
+  background-color: #E6E6E6;
+
+}
+
+.botao{
+  color: #FFFFFF;
+  border-radius: 4px;
+  border: 1px solid #0d426a !important;
+  box-shadow: none !important;
+  margin-top: 12px;
+  margin-bottom:  0px;
+  background-color: #0d426a !important;
+
+
+}
+
+
+@media screen and (min-width: 737px) and (max-width: 1139px) {
+
+}
+
+
+@media all and (max-width: 950px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+
+}
+
+@media all and (max-width: 600px) and (min-width: 500px) {
+  .cantoDireitoCabecalho{
+    float: left;
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 5px;
+  }
+  .tituloRelatorio{
+    font-size: 14px;
+  }
+
+}
+
+@media all and (max-width: 500px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+  .cantoDireitoCabecalho{
+    float: left;
+    text-align: left;
+    padding-top: 1px;
+    padding-left: 5px;
+  }
+  .tituloRelatorio{
+    font-size: 14px;
+  }
+
+}

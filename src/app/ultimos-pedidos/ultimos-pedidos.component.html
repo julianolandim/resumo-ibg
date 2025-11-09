@@ -1,0 +1,39 @@
+<div (click)="menuLateralComponent.toggleMenu()">
+
+<app-titulo-page titulo="Últimos Pedidos" *ngIf="!erro && isCarregado"></app-titulo-page>
+
+<app-alert tipo="danger" mensagem="Erro ao conectar com o servidor." *ngIf="erro "></app-alert>
+<app-alert tipo="warning" mensagem="Aguarde"   *ngIf="!isCarregado && !erro"></app-alert>
+
+<app-painel-simples titulo="Pedidos" col="12" tipo="primary" *ngIf="!erro && isCarregado">
+
+  <div class="zebra text-info font-bold " style="padding-top: 10px; padding-left: 10px" *ngFor="let pedido of ultimosPedidos?.pedidos" routerLink="/pedido/{{pedido.pedCod}}"  (click)="menuLateralComponent.toggleMenu()"   >
+    <div class="row">
+      <div class="col-xs-3">{{pedido.pedHoraFin}}</div>
+      <div class="col-xs-9">{{pedido.pedDatFin}}</div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-3">Repres:</div>
+      <div class="col-xs-9">{{pedido.pedRepNom}}</div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-xs-3">Cliente:</div>
+      <div class="col-xs-9">{{pedido.pedCliNom}}</div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-3">Valor:</div>
+      <div class="col-xs-5">{{pedido.pedTotLiq}}</div>
+      <div class="col-xs-4 text-right espaco-direita " [ngClass]="pedido.pedLucTotPor > 0 ? 'text-success' : pedido.pedLucTotPor == 0 ? 'text-info' : 'text-danger'"  >{{ambiente.convertValorFloatToBr(pedido.pedLucTotPor)}}%</div>
+    </div>
+
+    <div class="row margin-top"><div class="col-xs-12"></div></div>
+  </div>
+
+</app-painel-simples>
+</div>
+
+

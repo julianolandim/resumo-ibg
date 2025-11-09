@@ -1,0 +1,12 @@
+<div class="menu " [class.menu-open]="menuAberto" >
+  <ul >
+    <li routerLinkActive="active" > <a routerLink="/resumo"   (click)="toggleMenu()" class="h4" ><span class="glyphicon glyphicon-list-alt"></span> Resumo Geral</a> </li>
+    <li routerLinkActive="active"> <a routerLink="/resumo-diario"  (click)="toggleMenu()"  class="h4" ><span class="glyphicon glyphicon-calendar"></span> Resumo Diário</a> </li>
+    <li routerLinkActive="active"> <a routerLink="/ultimos-pedidos" (click)="toggleMenu()"  class="h4"><span class="glyphicon glyphicon-sort-by-attributes"></span> Últimos Pedidos</a> </li>
+    <li routerLinkActive="active"> <a routerLink="/ranking" (click)="toggleMenu();rankingService.setAno(ambiente.getAnoAtual())"  class="h4"><span class="glyphicon glyphicon-sort-by-order"></span> Ranking Vendas {{ambiente.getAnoAtual()}}</a> </li>
+    <li routerLinkActive="active"> <a routerLink="/ranking-ano-passado" (click)="toggleMenu();rankingService.setAno(ambiente.getAnoAtual()-1)"  class="h4"> <span class="glyphicon glyphicon-sort-by-order"></span> Ranking Vendas {{ambiente.getAnoAtual()-1}}</a> </li>
+    <li routerLinkActive="active"> <a routerLink="/chiquinho" (click)="toggleMenu()" (mousedown)="chiquinhoViewService.setCodRep('8970')"  class="h4" ><span class="glyphicon glyphicon-ice-lolly-tasted"></span> Chiquinho</a> </li>
+    <li routerLinkActive="active" class="h4"><a routerLink="/login"  (click)="toggleMenu()" (mousedown)="ambiente.logout()"><span class="glyphicon glyphicon-off"></span> Sair</a></li>
+
+  </ul>
+</div>

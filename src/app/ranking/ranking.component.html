@@ -1,0 +1,41 @@
+
+<div  class="div-toogle-menu" (click)="menuLateralComponent.toggleMenu()">
+
+
+    <app-alert tipo="danger"   mensagem="Erro ao conectar com o servidor." *ngIf="erro"></app-alert>
+    <app-alert tipo="warning" mensagem="Aguarde"   *ngIf="!isCarregado && !erro"></app-alert>
+
+      <app-titulo-page titulo="Ranking Pedidos {{rankingService.getAno()}}"  *ngIf="!erro && isCarregado"></app-titulo-page>
+
+      <div class="container-fluid content" >
+            <div class="row total-vendas-geral" *ngIf="!erro && isCarregado">
+              <div class="col-xs-12">
+                <div class="label-total-geral">TOTAL DE VENDAS NO ANO</div>
+                <div class="valor-total-geral">R$ {{ambiente.convertValorFloatToBr(totalVendasGeral)}}</div>
+              </div>
+            </div>
+            <div class="row  zebra"*ngFor="let e of ranking?.totais.totaVendasAnualPorRepresList">
+              <div class="col-xs-12">
+                <div class="row">
+                  <div class="col-xs-2 col-sm-1 col-nro-ranking">{{("00"+e.posicao).slice(-2)}}º</div>
+                  <div class="col-xs-10 col-sm-11" >
+                    <div class="row">
+                      <div class="col-xs-12 col-repres">{{e.representante}}</div>
+                    </div>
+                    <div class="row total-vendas" >
+                      <div class="col-xs-5 font-totais">TOTAL VENDAS:</div>
+                      <div class="col-xs-5 font-totais">R$ {{ambiente.convertValorFloatToBr(e.totalVendasDoRepres)}}</div>
+                      <div class="col-xs-2 font-totais porce-vendas">{{ambiente.convertValorFloatToBr(e.porcentualVendas)}}%</div>
+                    </div>
+                    <div class="row media-mensal">
+                      <div class="col-xs-5 font-totais" >MÉDIA MENSAL:</div>
+                      <div class="col-xs-7 font-totais">R$ {{ambiente.convertValorFloatToBr(e.mediaVendoasPorMes)}} ({{e.qtdMesesTrabalhados}} meses)</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+      </div>
+</div>

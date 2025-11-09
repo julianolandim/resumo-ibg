@@ -1,0 +1,17 @@
+<nav class="navbar  navbar-inverse  "  style="min-height: 70px;" >
+  <div class="container-fluid">
+    <div class="navbar-header" >
+      <button type="button" class="navbar-toggle pull-left" [ngClass]="btnToogleVisible ? 'visible' : 'invisible'" style="height: 50px;" (click)="disparaEvento()">
+        <span class="icon-bar icone-bar"  ></span>
+        <span class="icon-bar icone-bar" ></span>
+        <span class="icon-bar icone-bar" ></span>
+      </button>
+      <div class="navbar-brand font-logo" [ngClass]="btnToogleVisible ? 'visible' : 'invisible'" >IBG Botões</div>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+       <!-- <li><a href="#">Sair</a></li>-->
+      </ul>
+    </div>
+  </div>
+</nav>

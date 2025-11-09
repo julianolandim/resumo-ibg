@@ -1,0 +1,23 @@
+<div class="container-fluid content">
+  <div class="backgruoudItens separadorItem" *ngFor="let pedidoItem of pedidoItens">
+    <div class="row">
+      <div class="col-md-12" style="margin-bottom: 5px">
+        <div class="itensPedido artigo"><b><span class="artigo">ARTIGO {{pedidoItem.ped2ProArt}} </span></b></div>
+        <div class="itensPedido"><b>TAM.: </b>{{pedidoItem.ped2ProTam}}</div>
+        <div class="itensPedido">{{pedidoItem.ped2Fur}}</div>
+        <div class="itensPedido">BRILHO</div>
+        <div class="itensPedido"><b>COR: </b>{{pedidoItem.ped2Cor}} ({{pedidoItem.ped2OpcCor}}) </div>
+        <div class="itensPedido">{{pedidoItem.ped2QtdItm}} {{pedidoItem.ped2UniVen}} &nbsp;&nbsp;&nbsp;&nbsp;<b>EMBALAGEM:</b> {{pedidoItem.ped2Emb2}}</div>
+        <div class="itensPedido"><b>VALOR {{pedidoItem.ped2UniVen}}:</b> R$ {{ambiente.convertValorFloatToBr(pedidoItem.ped2ValUni)}} </div>
+        <div class="itensPedido"><b>TOTAL:</b> R$ {{ambiente.convertValorFloatToBr(pedidoItem.ped2ValTotItm)}}</div>
+        <div class="itensPedido"><b>OBS:</b> {{pedidoItem.ped2ObsItm}}</div>
+        <div class="itensPedido"><b>MARGEM: </b>
+          <span class="h5" [ngClass]="pedidoItem.ped2PorMarLuc > 0 ? 'text-success' : pedidoItem.ped2PorMarLuc < 0 ? 'text-danger' : 'text-warning' ">
+            <b>{{ambiente.convertValorFloatToBr(pedidoItem.ped2PorMarLuc)}}%</b>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

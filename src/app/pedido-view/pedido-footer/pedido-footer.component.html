@@ -1,0 +1,26 @@
+<div class="container-fluid content">
+  <div class="row"><br>
+    <div class="col-md-6 formaPagamento">
+      <div class="row"><div class="col-md-12 formaPagamento"><b>FORMA DE PAGAMENTO</b></div> </div>
+      <div class="row"><div class="col-md-12 formaPagamento">{{pedido?.pedidoFormaPagamentos[0].ped3FormPagto}}: {{pedido?.pedidoFormaPagamentos[0].ped3CondPagto}}</div> </div>{{pedido?.pedidoFormaPagamentos[0].ped3NroParc}} PARCELAS
+    </div>
+    <div class="col-md-6 totais">
+      <div class="row totais2"><div class="col-md-12"><b>TOTAL GERAL :  R$ {{ambiente.convertValorFloatToBr(pedido?.pedTotBru)}}</b></div> </div>
+      <div class="row totais2"><div class="col-md-12"><b>DESCONTO : {{ambiente.convertValorFloatToBr(pedido?.pedPorDes)}}&#x25;</b></div> </div>
+      <div class="row totais2"><div class="col-md-12"><b>TOTAL LIQUIDO : R$ {{ambiente.convertValorFloatToBr(pedido?.pedTotLiq)}}</b></div> </div>
+    </div>
+  </div>
+  <br>
+  <div class="contornoRetangulo">
+    <div class="row"><div class="col-md-12 obs"> <b>OBS: </b>{{pedido?.pedObs}}<br><!--OBS DA GRAVACAO--></div></div>
+  </div>
+  <p></p>
+  <div class="contornoRetangulo">
+    <div class="row"><div class="col-md-12 obs"> <b>OBS CADASTRADA: </b> <span style='color:red'>{{pedido?.pedObsFixa}}</span></div></div>
+  </div>
+  <p></p>
+  <div >
+    <div class="row"><div class="col-md-12 tolerancia"> <b>OBS: AS QUANTIDADES TEM TOLERÂNCIA DE 10% PARA MAIS OU PARA MENOS</b></div></div>
+  </div>
+
+</div>

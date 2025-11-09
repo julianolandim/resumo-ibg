@@ -1,0 +1,19 @@
+.zebra:nth-child(even){
+  background-color: #d9edf7 ;
+}
+
+.zebra:nth-child(odd){
+  background-color:#fcf8e3;
+}
+
+.font-bold{
+  font-weight: bold
+}
+
+.margin-top{
+  margin-top: 10px;
+}
+
+.espaco-direita{
+  padding-right: 25px;
+}

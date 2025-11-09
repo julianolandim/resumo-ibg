@@ -1,0 +1,27 @@
+<div class="container-fluid content">
+  <div class="row"><div class="col-md-12 dadosCliente"><b>PEDIDO ENVIADO EM: {{dtFinalizacao}}</b></div></div>
+  <div class="row"><div class="col-md-12 dadosCliente"><b>CLIENTE: {{cliNom}}</b> <b *ngIf="isCliNovo == 'SIM'"> (NOVO)</b></div></div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="row "><div class="col-md-12 dadosCliente">ENDEREÇO : {{endereco}}, {{nroEndereco}}&nbsp;&nbsp;&nbsp;BAIRRO: {{bairroEndereco}}&nbsp;&nbsp;&nbsp;CEP: {{cepEndereco}} </div></div>
+      <div class="row"><div class="col-md-12 dadosCliente">CIDADE : {{cidade}} - {{uf}} &nbsp;&nbsp;&nbsp;CNPJ&#x3a;{{cnpj}}</div></div>
+      <div class="row"><div class="col-md-12 dadosCliente">INCRICAO ESTADUAL&#x3a; {{insEstadual}} &nbsp;&nbsp;&nbsp;CONTATO : {{contato}}</div></div>
+      <div class="row"><div class="col-md-12 dadosCliente">CARGO DO CONTATO: {{cargoContato}}</div></div>
+      <div class="row"><div class="col-md-12 dadosCliente">TELEFONE 1: {{tel1}}&nbsp;&nbsp;&nbsp;&nbsp;TELEFONE 2: {{tel2}}</div></div>
+      <div class="row"><div class="col-md-12 dadosCliente">TELEFONE 3: {{tel3}}&nbsp;&nbsp;&nbsp;&nbsp;FAX: {{fax}}</div></div>
+    </div>
+
+    <div class="col-md-6 dadosCliente2">
+      <div class="row"><div class="col-md-12 dadosCliente"><b>PEDIDO : {{codPed}}</b></div></div>
+      <div class="row"><div class="col-md-12 dadosCliente"><b>REPRESENTANTE: {{repNom}}</b></div></div>
+      <div class="row"><div class="col-md-12 dadosCliente"><b>STATUS: {{pedStaLib}}</b></div></div>
+      <div class="row"><div class="col-md-12 dadosCliente"><b>ORD.COMPRA : {{nroOrdemCompra}} &nbsp;&nbsp;&nbsp; </b></div></div>
+      <div class="row"><div class="col-md-12 dadosCliente"><b>PREVISÃO PARA FATURAMENTO : {{pedDatPrevEnt}}</b></div></div>
+      <div class="row"><div class="col-md-12 dadosCliente"><b>TIPO DE VENDA : {{pedTipVen}}</b></div></div>
+    </div>
+  </div>
+
+  <div class="row"><div class="col-md-12"><div class="hr" style="margin-top: 8px;"></div></div></div>
+
+</div>

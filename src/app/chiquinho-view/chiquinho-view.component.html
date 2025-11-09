@@ -1,0 +1,24 @@
+
+<div class="div-toogle-menu" (click)="menuLateralComponent.toggleMenu();">
+
+
+          <app-titulo-page titulo="Últimos Pedidos Chiquinho" *ngIf="!erro && isCarregado"></app-titulo-page>
+
+          <app-alert tipo="danger" mensagem="Erro ao conectar com o servidor." *ngIf="erro "></app-alert>
+          <app-alert tipo="warning" mensagem="Aguarde"   *ngIf="!isCarregado && !erro"></app-alert>
+
+          <app-painel-simples titulo="Últimos 20 Pedidos" tipo="primary" [col]="12" *ngIf="!erro && isCarregado">
+
+                <table class="table table-hover">
+                  <tbody>
+                  <tr class="zebra"  *ngFor="let total of totais" >
+                    <td class="text-info h4 col-xs-6 padding-td" >{{total.dataPed}}</td>
+                    <td class="text-right text-info h4 col-xs-6 padding-td">R$ {{ambiente.convertValorFloatToBr(total.total)}}  </td>
+                  </tr>
+                  </tbody>
+                </table>
+
+
+          </app-painel-simples>
+
+</div>

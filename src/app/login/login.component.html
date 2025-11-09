@@ -1,0 +1,39 @@
+<div class="container" >
+  <div class="row main">
+    <div class="panel-heading">
+      <div class="panel-title text-center">
+        <h1 class="title">IBG Botões</h1>
+        <hr />
+        <div class="main-center2 alert alert-danger" [ngClass]="mostraErro ?'visible' : 'invisible'" role="alert" ><strong>{{msgErro}}</strong></div>
+      </div>
+    </div>
+    <div class="main-login main-center">
+      <form [formGroup]="formLogin" (ngSubmit)="onSubmit()" class="form-horizontal" method="post" action="#"  >
+        <div class="form-group ">
+          <label for="username" class="cols-sm-2 control-label">Usuário</label>
+          <div class="cols-sm-10">
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+              <input type="text" class="form-control "  aria-describedby="sizing-addon1" formControlName="username" id="username"  placeholder="Digite seu nome de usuário" (focus)="setMostraErro(false)" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="cols-sm-10">
+            <label for="password" class="cols-sm-2 control-label">Senha</label>
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+              <input type="password" class="form-control " formControlName="password" id="password"  placeholder="Digite a sua senha"  (focus)="setMostraErro(false)"  />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group " >
+          <button type="submit" name="btnLogar" id="btnLogar" class="btn btn-primary btn-lg btn-block login-button" [disabled]="btnFormDisable"  >{{btnText}}</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

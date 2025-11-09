@@ -1,0 +1,45 @@
+
+<div class="div-toogle-menu" (click)="menuLateralCompoent.toggleMenu()">
+
+<app-alert tipo="danger"   mensagem="Erro ao conectar com o servidor." *ngIf="erro"></app-alert>
+<app-alert tipo="warning" mensagem="Aguarde"   *ngIf="!termindouCarregar && !erro"></app-alert>
+
+<app-pedido-header1 margem="{{pedido?.pedLucTotPor}}" *ngIf="!erro && termindouCarregar"></app-pedido-header1>
+
+
+<app-pedido-header2 *ngIf="!erro && termindouCarregar"
+  codPed="{{pedido?.codPed}}"
+  dtFinalizacao="{{pedido?.dtFinalizacao}}"
+  cliNom="{{pedido?.cliNom}}"
+  repNom="{{pedido?.repNom}}"
+  pedStaLib="{{pedido?.pedStaLib}}"
+  pedDatPrevEnt="{{pedido?.pedDatPrevEnt}}"
+  pedTipVen="{{pedido?.pedTipVen}}"
+  endereco="{{pedido?.endereco}}"
+  nroEndereco="{{pedido?.nroEndero}}"
+  bairroEndereco="{{pedido?.bairroEndereco}}"
+  cepEndereco="{{pedido?.cepEndereco}}"
+  cidade="{{pedido?.cidade}}"
+  uf="{{pedido?.uf}}"
+  cnpj="{{pedido?.cnpj}}"
+  insEstadual="{{pedido?.insEstadual}}"
+  contato="{{pedido?.contato}}"
+  cargoContato="{{pedido?.cargoContato}}"
+  tel1="{{pedido?.tel1}}"
+  tel2="{{pedido?.tel2}}"
+  tel3="{{pedido?.tel3}}"
+  fax="{{pedido?.fax}}"
+  isCliNovo="{{pedido?.isCliNovo}}"
+  nroOrdemCompra="{{pedido?.nroOrdemCompra}}"
+>
+
+</app-pedido-header2>
+
+
+<app-pedido-corpo [pedidoItens]="pedido?.pedidoItens" *ngIf="!erro && termindouCarregar"> </app-pedido-corpo>
+
+
+<app-pedido-footer [pedido]="pedido" *ngIf="!erro && termindouCarregar"></app-pedido-footer>
+
+
+</div>

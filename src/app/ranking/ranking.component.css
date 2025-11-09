@@ -1,0 +1,111 @@
+
+.div-toogle-menu{
+  height: 100%;
+}
+
+.content{
+
+  margin: 5px 5px 5px 5px;
+
+}
+
+.total-vendas-geral {
+  background-color: #f0f9f0;
+  border: 2px solid #4B8A08;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.label-total-geral {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.valor-total-geral {
+  font-size: 32px;
+  font-weight: bold;
+  color: #4B8A08;
+}
+
+
+.zebra:nth-child(even){
+  background-color: #d9edf7 ;
+}
+
+.zebra:nth-child(odd){
+  background-color:#fcf8e3;
+}
+
+
+.zebra{
+  margin-top: 10px;
+}
+
+.col-nro-ranking{
+  color: #4B8A08;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+.col-repres{
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 10px
+}
+
+.font-totais{
+    font-size: 15px;
+}
+
+.total-vendas{
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.media-mensal{
+  padding-top: 2px
+}
+
+
+
+
+@media screen and (min-width: 737px) and (max-width: 1139px) {
+
+}
+
+
+@media all and (max-width: 950px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+
+}
+
+@media all and (max-width: 600px) and (min-width: 500px) {
+
+}
+
+@media all and (max-width: 500px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+  .font-totais{
+    font-size: 11px;
+
+  }
+
+  .col-repres{
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 10px;
+  }
+
+  .col-nro-ranking{
+    font-size: 35px;
+  }
+
+  .porce-vendas{
+    text-align: left;
+  }
+
+}

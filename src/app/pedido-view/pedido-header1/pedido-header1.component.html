@@ -1,0 +1,23 @@
+<div class="container-fluid content">
+  <div class='contornoRetangulo' >
+    <div class='row'>
+      <div class='col-md-6'  ><img [src]="cabecalho_relatorio" class='logoCabecalho'></div>
+      <div class='col-md-6 cantoDireitoCabecalho'  >
+        <div class='col-lg-12'><b>Emissão: </b><span id='dataEmissao'>{{ambiente.getDataAndHoraAtual()}}</span></div>
+        <div class='col-lg-12'><b>MARGEM: </b><span class="h5" [ngClass]="margem > 0 ? 'text-success' : margem == 0 ? 'text-warning' : 'text-danger'" ><b>{{ambiente.convertValorFloatToBr(margem)}}%</b></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class=row>
+    <div class='col-md-12 tituloRelatorio' style='text-align: right;' ><button type="button" class="botao"  id="btnAbrirPedido"  style="max-width: 200px"  onclick='javascript:window.history.go(-1)' >VOLTAR</button></div>
+  </div>
+
+  <div class="container-fluid">
+      <div class='row'>
+        <div class='col-md-12 tituloRelatorio2'><b>RELATÓRIO DE PEDIDO</b></div>
+      </div>
+  </div>
+
+  <div class='row'><div class='col-md-12'><div class='hr'></div></div></div>
+</div>

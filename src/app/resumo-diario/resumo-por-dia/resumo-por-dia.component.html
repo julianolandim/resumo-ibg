@@ -1,0 +1,15 @@
+<meta name="robots" content="noindex notranslate" charset="utf-8">
+
+<app-painel-simples titulo="{{titulo}}" col="{{col}}" tipo="{{tipo}}" >
+
+  <table class="table table-hover"  >
+    <tbody>
+    <tr class="zebra"  *ngFor="let consulta of consultas"  >
+      <td class="text-info h4 col-xs-6 padding-td"  *ngIf="consulta.valor > 0" >{{consulta.descricao}}</td>
+      <td class="text-right text-info h4 col-xs-6 padding-td"  *ngIf="consulta.valor > 0"  >R$ {{ambiente.convertValorFloatToBr(consulta.valor)}}  </td>
+    </tr>
+
+    </tbody>
+  </table>
+
+</app-painel-simples>

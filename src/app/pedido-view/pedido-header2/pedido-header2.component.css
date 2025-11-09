@@ -1,0 +1,46 @@
+.content{
+  font-family:Arial, "Open Sans", Helvetica, Gotham, sans-serif;
+  margin: 5px 5px 5px 5px;
+
+}
+
+.dadosCliente{
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+
+.dadosCliente2{
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+
+
+@media screen and (min-width: 737px) and (max-width: 1139px) {
+  .dadosCliente2{
+    margin-top: 10px;
+  }
+}
+
+
+@media all and (max-width: 950px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+  .dadosCliente2{
+    margin-top: 10px;
+  }
+}
+
+@media all and (max-width: 600px) and (min-width: 500px) {
+  .dadosCliente2{
+    margin-top: 10px;
+  }
+
+}
+
+@media all and (max-width: 500px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+
+  .dadosCliente2{
+    margin-top: 10px;
+  }
+
+}

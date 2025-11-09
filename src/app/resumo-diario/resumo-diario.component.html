@@ -1,0 +1,23 @@
+<div class="div-toogle-menu" (click)="menuLateralComponent.toggleMenu()">
+
+  <app-titulo-page titulo="Resumo por Dia" *ngIf="!erro && ternimouCarregar"></app-titulo-page>
+
+<app-alert tipo="danger" mensagem="Erro ao conectar com o servidor." *ngIf="erro "></app-alert>
+<app-alert tipo="warning" mensagem="Aguarde"   *ngIf="!ternimouCarregar && !erro"></app-alert>
+
+
+<app-resumo-por-dia *ngIf="!erro && ternimouCarregar"
+  titulo="Pedidos Liberados"
+  col="6"
+  tipo="primary"
+  [consultas]="resumos?.pedidos">
+</app-resumo-por-dia>
+
+<app-resumo-por-dia *ngIf="!erro && ternimouCarregar"
+  titulo="Faturamento"
+  col="6"
+  tipo="primary"
+  [consultas]="resumos?.faturados">
+</app-resumo-por-dia>
+</div>
+

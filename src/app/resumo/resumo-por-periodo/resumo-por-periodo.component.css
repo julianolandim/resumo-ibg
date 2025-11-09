@@ -1,0 +1,16 @@
+.zebra:nth-child(even){
+  background-color: #d9edf7 ;
+}
+
+.zebra:nth-child(odd){
+  background-color:#fcf8e3;
+}
+
+.padding-td{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.h4 {
+  font-size: 16px;
+}
