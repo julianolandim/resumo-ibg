@@ -1,6 +1,8 @@
 # resumo-ibg
 
-Aplicação web Angular (CLI v8) para exibir/resumir informações IBG. O projeto segue Angular 8 com TypeScript 3.4 e usa npm como gerenciador de pacotes.
+Aplicação web Angular (CLI v8) para exibir/resumir informações IBG, somente para admnistradores da empresa. 
+Este projeto é usando em um aplicativo ios via WebView.
+O projeto segue Angular 8 com TypeScript 3.4 e usa npm como gerenciador de pacotes.
 
 Este README consolida como instalar, rodar, testar e dar manutenção no projeto.
 
